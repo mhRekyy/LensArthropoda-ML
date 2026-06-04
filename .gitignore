@@ -1,0 +1,67 @@
+# ── Python / Backend ────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# Virtual environments (JANGAN di-upload ke GitHub)
+env/
+venv/
+.venv/
+ENV/
+
+# Environment variables — SENSITIF, jangan di-upload!
+.env
+*.env
+!env.example
+
+# Model files (besar — gunakan Git LFS jika perlu)
+backend/artifacts/*.pt
+backend/artifacts/*.pth
+backend/artifacts/*.h5
+backend/artifacts/saved_model/
+# Metadata boleh di-upload (kecil)
+!backend/artifacts/metadata.json
+!backend/artifacts/.gitkeep
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Node.js / Frontend ──────────────────────────────────────
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+.turbo/
+
+# Frontend env
+frontend/.env.local
+frontend/.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── OS & Editor ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Misc ────────────────────────────────────────────────────
+*.tmp
+*.bak
+coverage/
+.coverage
+
+# Video Demo
+*.mp4

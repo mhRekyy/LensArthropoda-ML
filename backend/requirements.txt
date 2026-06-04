@@ -1,0 +1,27 @@
+# ============================================================
+# LensArthropoda — Backend Dependencies
+# Install: pip install -r requirements.txt
+# ============================================================
+
+# Web framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.17
+
+# Environment
+python-dotenv==1.0.1
+
+# Machine Learning
+torch>=2.0.0
+torchvision>=0.15.0
+timm>=0.9.12
+
+# Image processing
+Pillow==10.4.0
+numpy>=1.24.0
+
+# Google Gemini AI
+google-generativeai==0.8.3
+
+# Validation
+pydantic==2.10.3
