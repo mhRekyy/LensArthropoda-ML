@@ -4,7 +4,7 @@ import React, { useState, useCallback, useRef } from "react";
 import { Upload, X, Loader2, Bug, Microscope, Cpu, Github, ImageIcon, AlertCircle, Sparkles, Info } from "lucide-react";
 import ResultCard, { PredictionResult } from "@/components/ResultCard";
 
-const API_BASE  = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+const API_BASE  = "https://hunteruku-lensarthropoda-api.hf.space";
 const MAX_BYTES = 10 * 1024 * 1024;
 const ACCEPT    = ["image/jpeg","image/jpg","image/png","image/webp"];
 type AppState   = "idle"|"uploading"|"analyzing"|"done"|"error";

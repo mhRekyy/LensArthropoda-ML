@@ -1,0 +1,22 @@
+# Menggunakan image Python 3.10 yang ringan
+FROM python:3.10-slim
+
+# Menentukan direktori kerja di dalam container
+WORKDIR /app
+
+# Menyalin file requirements.txt
+COPY requirements.txt .
+
+# Menginstal dependensi (menggunakan versi CPU untuk PyTorch agar build cepat dan ringan)
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Menyalin seluruh file backend ke dalam container
+COPY . .
+
+# Hugging Face Spaces secara default mengekspos port 7860
+EXPOSE 7860
+
+# Perintah untuk menjalankan server FastAPI
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
